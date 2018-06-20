@@ -79,7 +79,7 @@ def rdchiralRun(rxn, reactants, keep_isotopes=False, combine_enantiomers=True):
         # Set isotopes of reactant template
         # note: this is okay to do within the loop, because ALL atoms must be matched
         # in the templates, so the isotopes will get overwritten every time
-        [a.SetIsotope(i) for (i, a) in atoms_rt.iteritems()]
+        [a.SetIsotope(i) for (i, a) in atoms_rt.items()]
 
         # Make sure each atom matches
         if not all(atom_chirality_matches(atoms_rt[i], atoms_r[i]) for i in atoms_rt):
@@ -151,7 +151,7 @@ def rdchiralRun(rxn, reactants, keep_isotopes=False, combine_enantiomers=True):
         # note: this is okay to do within the loop, because ALL atoms must be matched
         # in the templates, so the isotopes will get overwritten every time
         # This makes it easier to check parity changes
-        [a.SetIsotope(i) for (i, a) in atoms_pt.iteritems()]
+        [a.SetIsotope(i) for (i, a) in atoms_pt.items()]
         ###############################################################################
 
 

@@ -206,9 +206,9 @@ def ReactionStringToImage(rxn_string, strip=True, update=True, options=None,
 
     # Stich together mols (ignore agents)
     if retro:
-    	mols = reactants + ['<-'] + products
+        mols = reactants + ['<-'] + products
     else:
-		mols = reactants + ['->'] + products
+        mols = reactants + ['->'] + products
     if update:
         [mol.UpdatePropertyCache(False) for mol in mols if mol is not None and type(mol) != str]
     if strip:
